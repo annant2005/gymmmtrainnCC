@@ -1,4 +1,5 @@
 from flask import Flask, render_template, Response, jsonify, request
+CORS(app)
 import cv2
 import mediapipe as mp
 import numpy as np
