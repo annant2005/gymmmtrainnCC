@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: my-app
+    env: python
+    buildCommand: |
+      pip install --upgrade pip
+      pip install -r requirements.txt
+    startCommand: first app.py  # Change this to match your entry file
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10  # Change based on your project needs
