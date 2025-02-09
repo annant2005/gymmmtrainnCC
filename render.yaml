@@ -3,7 +3,8 @@ services:
     name: my-app
     env: python
     buildCommand: |
-      pip install --upgrade pip
+      apt-get update && apt-get install -y python3-dev build-essential
+      pip install --upgrade pip setuptools wheel
       pip install -r requirements.txt
     startCommand: first app.py  # Change this to match your entry file
     envVars:
