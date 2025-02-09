@@ -1,11 +1,11 @@
 from flask import Flask, render_template, Response, jsonify, request
-CORS(app)
+
 import cv2
 import mediapipe as mp
 import numpy as np
 
 app = Flask(__name__)
-
+CORS(app)
 # Initialize MediaPipe Pose model
 mp_pose = mp.solutions.pose
 pose = mp_pose.Pose(min_detection_confidence=0.5, min_tracking_confidence=0.5)
